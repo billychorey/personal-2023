@@ -1,0 +1,93 @@
+//layout
+
+footer {
+  position: relative;
+  height: 100px;
+}
+//variables
+$bodycopy: #120f0d;
+
+.pg-fun {
+  .content {
+    height: 100%;
+    width: 800px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  padding-top: 4rem;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  background-color: #0E1217;
+  .site-heading {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: white;
+    padding-top: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    max-width: 95%;
+    @media all and (max-width: 480px) {
+        font-size: 2.25rem;
+    }
+  }
+
+  .white-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .175rem .5rem;
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid whitesmoke;
+      border-radius: 4px;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+  }
+  
+  .email-btn {
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    padding:13px 32px;
+    text-decoration:none;
+  }
+  
+  .email-btn:hover {
+    background: whitesmoke;
+    color: darkgray;
+  }
+
+  .linkwrap {
+    margin: 0 auto;
+    transform: translateX(-2rem);
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .img-layout {
+    transform: translateY(88px);
+    z-index: -10;
+    position: relative;
+  }
+
+
+  .ground {
+    height: 100px;
+    background: hsla(213, 24%, 7%, 1);
+    background: linear-gradient(180deg, hsla(213, 24%, 7%, 1) 0%, hsla(122, 50%, 25%, 1) 85%);
+    background: -moz-linear-gradient(180deg, hsla(213, 24%, 7%, 1) 0%, hsla(122, 50%, 25%, 1) 85%);
+    background: -webkit-linear-gradient(180deg, hsla(213, 24%, 7%, 1) 0%, hsla(122, 50%, 25%, 1) 85%);
+  }
+}

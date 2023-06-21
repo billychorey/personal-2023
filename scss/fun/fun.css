@@ -1,0 +1,101 @@
+.pg-fun {
+  background-color: #0E1217;
+}
+
+.pg-fun ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pg-fun .site-heading {
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  color: white;
+  padding-top: 5rem;
+  font-size: 4rem;
+  text-align: center;
+  max-width: 95%;
+}
+
+@media all and (max-width: 480px) {
+  .pg-fun .site-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.pg-fun .content {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pg-fun .white-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .175rem .5rem;
+  border: 2px solid transparent;
+}
+
+.pg-fun .white-link:hover {
+  border: 2px solid whitesmoke;
+  border-radius: 4px;
+}
+
+.pg-fun .email-btn {
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 13px 32px;
+  text-decoration: none;
+}
+
+.pg-fun .email-btn:hover {
+  background: whitesmoke;
+  color: darkgray;
+}
+
+.pg-fun .linkwrap {
+  margin: 0 auto;
+}
+
+.pg-fun .linkwrap li {
+  margin-bottom: 1rem;
+}
+
+.pg-fun .img-layout {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.pg-fun img {
+  display: block;
+  position: absolute;
+  bottom: 31px;
+  left: 20%;
+  max-width: 300px;
+}
+
+.pg-fun .ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  background: #0e1116;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0e1116), color-stop(85%, #206022));
+  background: linear-gradient(180deg, #0e1116 0%, #206022 85%);
+  background: -webkit-linear-gradient(180deg, #0e1116 0%, #206022 85%);
+}
+/*# sourceMappingURL=fun.css.map */

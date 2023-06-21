@@ -1,0 +1,304 @@
+@import "fun/fun.scss";
+//home scss here
+.home {
+    background: #536976;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #292E49, #536976);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #292E49, #536976);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //layout
+    html {
+        scroll-behavior: smooth;
+    }
+    main {
+        margin: 8rem 0;
+    }
+    .content-column {
+        width: 800px;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    //generic
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    //global
+    a:not(.button) {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #06df3c;
+            &:hover {
+                border-bottom: 2px solid #F49FBC;
+                color: #F49FBC;
+                -webkit-transition: all 0.5s 0s ease;
+                -moz-transition: all 0.5s 0s ease;
+                -o-transition: all 0.5s 0s ease;
+                transition: all 0.5s 0s ease;
+            }
+    }
+
+    * {
+        font-family: 'Lato', Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    }
+
+
+
+
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+p {
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+//color
+.white {
+    color: white;
+}
+
+//button
+$bg: #f3f8fa;
+$white: #fff;
+$black: #06df3c;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, .076, 1)) {
+    transition: $property $duration $ease;
+}
+
+* {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+
+
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+
+    &.learn-more {
+        width: 18rem;
+        height: auto;
+
+        .circle {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: $black;
+            border-radius: 1.625rem;
+
+            .icon {
+                @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: $white;
+
+                &.arrow {
+                    @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+                    left: 0.625rem;
+                    width: 1.125rem;
+                    height: 0.125rem;
+                    background: none;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: -0.25rem;
+                        right: 0.0625rem;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        border-top: 0.125rem solid #fff;
+                        border-right: 0.125rem solid #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .button-text {
+            @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+            position: absolute;
+            top: 0;
+            left: 16px;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: $black;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &:hover {
+        .circle {
+            width: 100%;
+
+            .icon {
+                &.arrow {
+                    background: $white;
+                    transform: translate(1rem, 0);
+                }
+            }
+        }
+
+        .button-text {
+            color: $white;
+        }
+    }
+}
+
+
+     //nav
+     nav {
+         display: flex;
+         justify-content: flex-end;
+
+         a {
+
+             display: inline-block;
+             margin-left: 1.5rem;
+
+         }
+     }
+
+     nav ul {
+         display: flex;
+         flex-direction: row;
+
+         li {
+             display: inline-block;
+             margin-bottom: 2rem;
+         }
+     }
+     }
+
+
+.billy-img {
+    filter: grayscale(100%);
+    display: block;
+    border-radius: 50%;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+    span {
+        display: block;
+    }
+    .fed {
+        max-width: 600px;
+    }
+}
+h2 {
+    font-size: 2rem;
+}
+
+.about {
+    color: white;
+    .about-wrap {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 4rem;
+        p {
+            margin-right: 4rem;
+            max-width: 300px;
+        }
+    }
+    a {
+        color: white;
+
+    }
+    @media all and (max-width: 680px) {
+        .about-wrap {
+            flex-direction: column;
+        }
+        p {
+            max-width: 400px;
+        }
+    }
+}
+.content {
+    margin-bottom: 6rem;
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+
+
+.social-icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    margin-right: 1rem;
+    transform: translateY(12px);
+    &.linkedin {
+        background-image: url(../img/linkedin.svg);
+        
+    }
+
+    &.insta {
+        background-image: url(../img/instagram-logo.svg
+);
+
+    }
+    &.twitter {
+        background-image: url(../img/twitter.svg);
+
+    }
+    &.email {
+        background-image: url(../img/gmail.svg);
+
+    }
+}
+
+.contact {
+    ul {
+        li {
+            margin-bottom: 1.5rem;
+        }
+    
+    }
+}
+.btn-color {
+    background: #AEDB1D;
+}
